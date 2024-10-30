@@ -42,4 +42,11 @@ npm run test:unit
 
 ```sh
 npm run lint
+
 ```
+
+# Description
+
+This boilerplate has a grid to structure the views with a header, main and footer containers.
+It has also a simple example of store manager with pinia and is responsive for its menubar.
+There is a example of a vue composable for http requests.

@@ -31,6 +31,7 @@ footer {
   background-color: beige;
 }
 main {
+  padding: 0 1rem;
   @media (min-width: 1024px) {
     padding: 0 6rem 1rem 6rem;
   }
