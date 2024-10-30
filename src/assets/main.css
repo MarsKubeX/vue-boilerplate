@@ -1,0 +1,20 @@
+body {
+  min-height: 100dvh;
+  background-color: #c1c5c9;
+  margin: 0px;
+  /* @media (min-width: 1024px) {
+    padding: 0 6rem 1rem 6rem;
+  } */
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+a:hover {
+  background-color: hsla(160, 100%, 37%, 0.2);
+}
