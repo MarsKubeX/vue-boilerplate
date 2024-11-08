@@ -32,6 +32,7 @@ const openCloseMenu = () => {
   <nav :class="[isMenuOpen ? 'nav-menu-open' : 'nav-menu-close']">
     <RouterLink @click="openCloseMenu()" to="/">Home</RouterLink>
     <RouterLink @click="openCloseMenu()" to="/about">About</RouterLink>
+    <RouterLink @click="openCloseMenu()" to="/pokemon">Pokemon</RouterLink>
   </nav>
   <RouterLink class="nav-login" to="/login"
     ><i class="material-icons"

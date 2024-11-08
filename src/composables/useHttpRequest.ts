@@ -1,11 +1,12 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { readonly, ref } from 'vue'
 
-export function useHttpRequest(
+export async function useHttpRequest(
   endpoint: string,
   method: string = 'GET',
   body = null,
 ) {
-  const response = ref({})
+  const response: any = ref({})
   const sendRequest = async () => {
     try {
       const res = await fetch(endpoint, {
@@ -14,11 +15,13 @@ export function useHttpRequest(
         headers: { 'Content-Type': 'application/json' },
       })
       const data = await res.json()
+
       response.value = data
     } catch (error) {
       throw new Error('Request failed' + error)
     }
   }
-  sendRequest()
-  return { response: readonly(response) }
+  await sendRequest()
+
+  return { response: readonly(response.value) }
 }
