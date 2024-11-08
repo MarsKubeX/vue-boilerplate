@@ -1,20 +1,47 @@
-body {
+@import './base.css';
+
+/* body {
   min-height: 100dvh;
   background-color: #c1c5c9;
   margin: 0px;
-  /* @media (min-width: 1024px) {
+  @media (min-width: 1024px) {
     padding: 0 6rem 1rem 6rem;
-  } */
+  }
+} */
+
+header {
+  @media (min-width: 1024px) {
+    display: flex;
+  }
+  @media (max-width: 1024px) {
+    background: var(--color-background);
+    padding-left: 0;
+  }
+}
+main {
+  @media (min-width: 1024px) {
+    padding: 0 6rem 1rem 6rem;
+  }
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+.primary-button {
+  background-color: var(--color-background);
+  border: 1px solid var(--pt-fourth-color);
+  border-radius: 20px;
+  padding: 0.5rem;
 }
 
-a:hover {
-  background-color: hsla(160, 100%, 37%, 0.2);
+.primary-button {
+  background-color: var(--color-background);
+  border: 1px solid var(--pt-fourth-color);
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.primary-button:active {
+  background-color: var(--pt-third-color);
+  padding: 0.6rem;
+  opacity: 1;
+  transition: 0.3s;
 }

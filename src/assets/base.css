@@ -1,0 +1,66 @@
+:root {
+  --pt-white: #ffffff;
+  --pt-white-soft: #f8f8f8;
+  --pt-c-white-mute: #f2f2f2;
+
+  --pt-black: #1a2037;
+  --pt-black-soft: #222222;
+  --pt-black-mute: #282828;
+
+  /* theme colors */
+  --pt-first-color: #d9dad7;
+  --pt-second-color: #c24d2c;
+  --pt-third-color: #3e4a61;
+  --pt-fourth-color: #1a2639;
+}
+
+:root {
+  --color-background: var(--pt-first-color);
+  --color-header: var(--pt-third-color);
+  --color-footer: var(--pt-third-color);
+  --color-text: var(--pt-fourth-color);
+  --color-text-second: var(--pt-white-soft);
+}
+
+body {
+  min-height: 100dvh;
+  background: var(--color-background);
+  margin: 0px;
+  color: var(--color-text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background: var(--color-header);
+  padding: 1rem 2rem;
+  a,
+  .green {
+    text-decoration: none;
+    color: var(--pt-second-color);
+    transition: 0.4s;
+    padding: 3px;
+  }
+
+  a:hover {
+    background-color: var(--pt-first-color);
+  }
+}
+
+main {
+  padding: 0 1rem;
+}
+
+footer {
+  background: var(--color-footer);
+  color: var(--color-text-second);
+}
+
+input[type='text'],
+input[type='password'] {
+  padding: 0.4rem 1rem;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}

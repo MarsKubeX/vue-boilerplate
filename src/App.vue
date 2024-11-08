@@ -9,7 +9,9 @@ import NavbarMenu from './components/NavbarMenu.vue'
       <NavbarMenu></NavbarMenu>
     </header>
     <main><RouterView /></main>
-    <footer>This is the footer</footer>
+    <footer>
+      <div><p>This is the footer</p></div>
+    </footer>
   </div>
 </template>
 
@@ -19,21 +21,10 @@ import NavbarMenu from './components/NavbarMenu.vue'
   min-height: 100dvh;
   grid-template-rows: auto 1fr auto;
 }
-header {
-  @media (min-width: 1024px) {
-    background-color: aqua;
-    padding-left: 2rem;
-  }
-}
 footer {
-  text-align: center;
-  padding-bottom: 2rem;
-  background-color: beige;
-}
-main {
-  padding: 0 1rem;
-  @media (min-width: 1024px) {
-    padding: 0 6rem 1rem 6rem;
+  div {
+    text-align: center;
+    padding-bottom: 2rem;
   }
 }
 </style>

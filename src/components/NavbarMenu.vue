@@ -8,29 +8,41 @@ const openCloseMenu = () => {
 </script>
 
 <template>
-  <header>
-    <div class="header-button-nav-menu">
+  <div class="header-button-nav-menu">
+    <div>
       <i
         @click="openCloseMenu()"
         class="material-icons"
         style="font-size: 36px; cursor: pointer"
       >
         <Transition name="fade-icon-menu" mode="out-in">
-          <span style="color: #328565" v-if="isMenuOpen">close</span>
-          <span style="color: #328565" v-else>menu</span></Transition
+          <span v-if="isMenuOpen">close</span>
+          <span v-else>menu</span></Transition
         ></i
       >
     </div>
-    <nav :class="[isMenuOpen ? 'nav-menu-open' : 'nav-menu-close']">
-      <RouterLink @click="openCloseMenu()" to="/">Home</RouterLink>
-      <RouterLink @click="openCloseMenu()" to="/about">About</RouterLink>
-    </nav>
-  </header>
+    <div>
+      <RouterLink to="/login"
+        ><i class="material-icons"
+          ><span class="material-symbols-outlined"> login </span></i
+        ></RouterLink
+      >
+    </div>
+  </div>
+  <nav :class="[isMenuOpen ? 'nav-menu-open' : 'nav-menu-close']">
+    <RouterLink @click="openCloseMenu()" to="/">Home</RouterLink>
+    <RouterLink @click="openCloseMenu()" to="/about">About</RouterLink>
+  </nav>
+  <RouterLink class="nav-login" to="/login"
+    ><i class="material-icons"
+      ><span class="material-symbols-outlined"> login </span></i
+    ></RouterLink
+  >
 </template>
 <style scoped>
 header {
   @media (min-width: 1024px) {
-    padding: 2rem 0;
+    padding: 1rem 0;
   }
 }
 
@@ -39,10 +51,16 @@ nav {
   font-size: 1rem;
   display: flex;
   @media (max-width: 1024px) {
-    background-color: #328565;
     flex-direction: column;
+    background-color: var(--color-header);
     padding: 2rem 0 2rem 0;
     position: absolute;
+  }
+}
+
+.nav-login {
+  @media (max-width: 1024px) {
+    display: none;
   }
 }
 
@@ -66,23 +84,23 @@ nav {
 }
 
 nav a.router-link-exact-active {
-  color: white;
+  color: var(--pt-first-color);
+  cursor: default;
 }
 
 nav a {
-  display: inline-block;
   @media (min-width: 1024px) {
     padding: 0 1rem;
-    border-left: 1px solid #328565;
+    border-left: 1px solid var(--pt-second-color);
+    align-content: center;
   }
   @media (max-width: 1024px) {
-    padding: 0.5rem 0 0 2rem;
+    padding: 0.5rem 2rem;
     font-size: 1.5rem;
   }
 }
 nav a:first-of-type {
   border: 0;
-  padding-left: 2rem;
   @media (min-width: 1024px) {
     padding-left: 0;
   }
@@ -94,6 +112,8 @@ nav a.router-link-exact-active:hover {
 
 .header-button-nav-menu {
   padding: 1rem 0 0 1rem;
+  display: flex;
+  justify-content: space-between;
   @media (min-width: 1024px) {
     display: none;
   }

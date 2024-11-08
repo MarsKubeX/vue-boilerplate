@@ -38,15 +38,32 @@ npm run build
 npm run test:unit
 ```
 
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-
-```
-
 # Description
 
 This boilerplate has a grid to structure the views with a header, main and footer containers.
-It has also a simple example of store manager with pinia and is responsive for its menubar.
+It has also a simple example of store manager with Pinhia and is responsive for its menubar.
 There is a example of a vue composable for http requests.
+
+# Routes
+
+There are 3 routes: "/login" (it is a fake login, just to add a form example), "/" (home, where there are some variables managed by the Pinhia store manager) and "/about" (with a button to increment a counter in the home page. This is a Pinhia store example)
+
+# Road map
+
+- [x] Responsive: there is a navbar that helps to have a responsive design.
+- [x] Routing: there are some general routes.
+- [x] State manager: Added Pinia as state manager.
+- [x] Composables: there is one compasable for http requests.
+- [x] Form example: There is a login form as example. It is just and example and it has not any log in functionality. I don't want to add a login functionality to the boilerplate since a lot of projects has not any login.
+- [...] Global css variables: Added theme css variables.
+- [...] BEM: block-element-modifier css style is yet to be improved
+- [ ] Models (TS interfaces).
+- [ ] Http requests config.
+- [ ] Guards.
+- [ ] ESLint and prettier config.
+- [ ] Unit tests.
+- [ ] i18n
+- [ ] Style-lint config
+- [ ] Husky and lint-staged conig
+- [ ] Environment Varables (dot env)
+- [ ] Global error handling with toaster
