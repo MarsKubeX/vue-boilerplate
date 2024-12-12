@@ -15,9 +15,9 @@ onMounted(async () => {
 
 <template>
   <div class="pokemon-view-container">
-    <div v-if="pokemonList.length">
+    <div v-if="pokemonList.results">
       <li
-        v-for="pokemon in pokemonList"
+        v-for="pokemon in pokemonList.results"
         @click="getPokemonDetails(pokemon.name)"
         :key="pokemon.name"
       >

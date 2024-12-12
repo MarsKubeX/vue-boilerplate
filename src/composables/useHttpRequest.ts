@@ -18,6 +18,7 @@ export async function useHttpRequest(
 
       response.value = data
     } catch (error) {
+      //TODO add error handler with toaster
       throw new Error('Request failed' + error)
     }
   }

@@ -1,19 +1,19 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import { ref } from 'vue'
+import { ref, type Ref } from 'vue'
 import { defineStore } from 'pinia'
 import { useHttpRequest } from '@/composables/useHttpRequest'
+import type { PokemonDetailType, PokemonListType } from '@/types/pokemon.types'
 
 export const usePokemonStore = defineStore('pokemon', () => {
   //state
-  const pokemonList: any = ref([])
-  const pokemonInfo: any = ref({})
+  const pokemonList: Ref<Partial<PokemonListType>> = ref({})
+
+  const pokemonInfo: Ref<Partial<PokemonDetailType>> = ref({})
   //Actions
   const getPokemons = async () => {
     const pokemons = await useHttpRequest(
       'https://pokeapi.co/api/v2/pokemon?limit=25&offset=0',
     )
-
-    pokemonList.value = pokemons.response.results
+    pokemonList.value = pokemons.response
   }
 
   const getPokemonDetails = async (name: string) => {

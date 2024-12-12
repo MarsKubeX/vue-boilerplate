@@ -55,10 +55,10 @@ There are 3 routes: "/login" (it is a fake login, just to add a form example), "
 - [x] State manager: Added Pinia as state manager.
 - [x] Composables: there is one compasable for http requests.
 - [x] Form example: There is a login form as example. It is just and example and it has not any log in functionality. I don't want to add a login functionality to the boilerplate since a lot of projects has not any login.
+- [x] Custom types (TS interfaces).
 - [...] Global css variables: Added theme css variables.
 - [...] BEM: block-element-modifier css style is yet to be improved
 - [...] Http requests config. Already have the composable to help with http requests
-- [ ] Models (TS interfaces).
 - [ ] Guards.
 - [ ] ESLint and prettier config.
 - [ ] Unit tests.

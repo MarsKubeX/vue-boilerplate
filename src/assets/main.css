@@ -1,14 +1,5 @@
 @import './base.css';
 
-/* body {
-  min-height: 100dvh;
-  background-color: #c1c5c9;
-  margin: 0px;
-  @media (min-width: 1024px) {
-    padding: 0 6rem 1rem 6rem;
-  }
-} */
-
 header {
   @media (min-width: 1024px) {
     display: flex;
@@ -22,13 +13,6 @@ main {
   @media (min-width: 1024px) {
     padding: 0 6rem 1rem 6rem;
   }
-}
-
-.primary-button {
-  background-color: var(--color-background);
-  border: 1px solid var(--pt-fourth-color);
-  border-radius: 20px;
-  padding: 0.5rem;
 }
 
 .primary-button {
